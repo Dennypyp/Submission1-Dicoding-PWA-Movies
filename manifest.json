@@ -1,0 +1,21 @@
+{
+    "name": "Dinamika Movies",
+    "short_name": "Dinamika",
+    "description": "Submission PWA 1",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#24C5F0",
+    "theme_color": "#24C5F0",
+    "icons": [
+        {
+            "src": "image/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "image/icon2.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+}

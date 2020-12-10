@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"/>
+        <title>Dinamika Movies</title>
+        <meta name="description" content="Subsmission PWA 1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#24C5F0"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Navigasi -->
+    <nav class="blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="logo-container">Dinamika</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+        
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+        </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+
+<!-- Content -->
+    <div class="container" id="body-content"></div>
+<!-- Akhir Content -->
+
+<!-- Footer -->
+<footer class="page-footer blue darken-1">
+    <div class="container">
+        <div class="row">
+        <div class="col l6 s12 white-text">
+            <h5>Dinamika Movies</h5>
+            <ul>
+                <li><a href="https://www.instagram.com/dennypyp" class="waves-effect">
+                    <img src="image/ig.png" alt=""class="left"><h6 class="waves-effect white-text">@dennypyp</h6>
+                </a></li>
+                <li><a href="https://www.twitter.com/dennypyp" class="waves-effect">
+                    <img src="image/twit.png" alt=""class="left"><h6 class="waves-effect white-text">@dennypyp</h6>
+                </a></li>
+                <li><a href="https://www.facebook.com/denny.reaperdead" class="waves-effect">
+                    <img src="image/fb.png" alt="" class="left"><h6 class="waves-effect white-text">Denny Putra</h6>
+                </a></li>
+            </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Navigasi</h5>
+            <ul>
+                <li><a class="waves-effect white-text" href="#!"><i class="left material-icons">live_tv</i>Beranda</a></li>
+                <li><a class="waves-effect white-text" href="#!"><i class="left material-icons">hd</i>Movies</a></li>
+                <li><a class="waves-effect white-text" href="#!"><i class="left material-icons">ondemand_video</i>TV Series</a></li>
+                <li><a class="waves-effect white-text" href="#!"><i class="left material-icons">short_text</i>Genre</a></li>
+                <li><a class="waves-effect white-text" href="#!"><i class="left material-icons">person</i>About</a></li>      
+        </ul>
+        </div>
+        </div>
+    </div>
+    <div class="footer-copyright center-align white-text">
+        <div class="container">
+            Copyright &copy; Denny Putra Yudha Pratama, 2020
+        </div>
+    </div>
+</footer>
+<!-- Akhir Footer -->
+
+<!-- Script -->
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        // REGISTER SERVICE WORKER
+        if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function() {
+                console.log("Pendaftaran ServiceWorker berhasil");
+            })
+            .catch(function() {
+                console.log("Pendaftaran ServiceWorker gagal");
+            });
+        });
+        } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+        }
+    </script>
+<!-- Akhir Script -->
+    </body>
+</html>
